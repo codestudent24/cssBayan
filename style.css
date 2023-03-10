@@ -1,3 +1,7 @@
+html {
+    background-color: blanchedalmond;
+}
+
 body {
     width: 80%;
     margin: 0 auto;
@@ -6,12 +10,12 @@ body {
 h1 {
     font-size: 3rem;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10px auto;
+    margin: 1rem auto;
 }
 
 .container {
     height: fit-content;
-    padding: 20px 0;
+    padding: 1rem 0;
     margin: 0 auto;
     position: relative;
 }
@@ -29,37 +33,30 @@ h1 {
     appearance: none;
 }
 
-.fa-xmark {
-    display: none;
+.fa-plus {
+    transition: transform .5s;
 }
 
-.mem_inpute:checked ~ .image_wrapper {
-    display: block;
+.mem_inpute:checked ~ .image {
+    max-height: 25rem;
 }
 
 .mem_inpute:checked ~ i.fa-plus {
-    display: none;
-}
-
-.mem_inpute:checked ~ i.fa-xmark {
-    display: block;
+    transform: rotateZ(45deg);
 }
 
 .fa-solid {
     position: absolute;
-    top: 20px;
-    right: 10px;
-    font-size: 36px;
-}
-
-.image_wrapper {
-    margin: 10px auto;
-    width: fit-content;
-    display: none;
+    top: 1.25rem;
+    right: 1rem;
+    font-size: 2rem;
 }
 
 .image {
-    max-height: 400px;
+    display: block;
+    margin: 1rem auto;
+    max-height: 0;
+    transition: max-height .3s;
 }
 
 .hidden {
@@ -67,19 +64,21 @@ h1 {
 }
 
 .container:hover {
-    color: blue;
+    background-color: bisque;
+}
+
+.container:hover .mem_title {
+    border-bottom: 2px solid black;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media  screen and (min-width: 1080px) {
-    .container:hover .image_wrapper {
-        display: block;
+    .container:hover .image {
+        max-height: 25rem;
     }
 
     .container:hover i.fa-plus {
-        display: none;
+        transform: rotateZ(45deg);
     }
-    
-    .container:hover i.fa-xmark {
-        display: block;
-    }
+
 }
