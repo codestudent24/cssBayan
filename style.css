@@ -21,6 +21,17 @@ h1 {
     margin: 0 auto;
 }
 
+.fa-plus {
+    transition: transform .5s;
+
+}
+
+.fa-solid {
+    display: block;
+    font-size: 1rem;
+    margin: .5rem 1rem 0 auto;
+}
+
 .mem_title {
     display: block;
     font-family: 'Times New Roman', Times, serif;
@@ -33,17 +44,6 @@ h1 {
 
 .mem_inpute {
     appearance: none;
-}
-
-.fa-plus {
-    transition: transform .5s;
-
-}
-
-.fa-solid {
-    display: block;
-    font-size: 1rem;
-    margin: .5rem 1rem 0 auto;
 }
 
 .mem_inpute:checked ~ .image {
@@ -68,10 +68,6 @@ h1 {
     margin: 0;
     padding: 0;
     border: none;
-}
-
-.hidden {
-    display: none;
 }
 
 .container:hover {
