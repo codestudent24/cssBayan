@@ -1,40 +1,121 @@
+html {
+    background-color: blanchedalmond;
+}
+
 body {
-    width: 80%;
+    width: 90%;
+    max-width: 65rem;
     margin: 0 auto;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10px auto;
+    margin: 1rem auto;
 }
 
 .container {
-    height: fit-content;
-    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0 auto;
-    position: relative;
+}
+
+.fa-plus {
+    transition: transform .5s;
+
+}
+
+.fa-solid {
+    display: block;
+    font-size: 1rem;
+    margin: .5rem 1rem 0 auto;
 }
 
 .mem_title {
+    display: block;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .5rem 0 0 0;
+    margin-bottom: .5rem;
+    flex-grow: 2;
+}
+
+.mem_inpute {
+    appearance: none;
+}
+
+.mem_inpute:checked ~ .image {
+    max-height: 25rem;
+}
+
+.mem_inpute:checked ~ i.fa-plus {
+    transform: rotateZ(45deg);
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+    max-height: 0;
+    max-width: 100%;
+    transition: max-height .3s;
+}
+
+.new-string {
+    width: 100%;
+    height: 0;
     margin: 0;
+    padding: 0;
+    border: none;
 }
 
-.icon {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    font-size: 36px;
+.container:hover {
+    background-color: bisque;
 }
 
-.image_wrapper {
-    margin: 10px auto;
-    width: fit-content;
+.container:hover .mem_title {
+    border-bottom: .1rem solid black;
 }
 
-.hidden {
-    display: none;
+@media  screen and (min-width: 441px) {
+    body {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .mem_title {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    .fa-solid {
+        font-size: 1.5rem;
+    }
 }
 
+@media  screen and (min-width: 821px) {
+    .container:hover .image {
+        max-height: 25rem;
+    }
+
+    .container:hover i.fa-plus {
+        transform: rotateZ(45deg);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .mem_title {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    .fa-solid {
+        font-size: 2rem;
+    }
+}
